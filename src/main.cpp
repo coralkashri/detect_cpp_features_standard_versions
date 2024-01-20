@@ -9,11 +9,6 @@
 #include <string>
 #include <vector>
 
-int main()
-{
-    std::cout << "Hello, World!" << std::endl;
-    std::vector<std::string> strs;
-    strs.push_back("AAA");
-    int a = 5;
-    return 0;
+int main() {
+	return 0;
 }
