@@ -14,8 +14,10 @@ if (${CMAKE_BUILD_TYPE} STREQUAL "Release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 endif()
 
-include(e47b27d427b8f90226e280fa9ac4c9fc/use_clang.cmake)
-
 file(GLOB_RECURSE SOURCE_FILES src/*)
 
-add_clang_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+
+set(CLANG_TARGET_NAME ${PROJECT_NAME})
+
+include(e47b27d427b8f90226e280fa9ac4c9fc/use_clang.cmake)
